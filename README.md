@@ -1,2 +1,2 @@
 # HTML-and-CSS-Projects
-HTML and CSS project that were created while attending The Tech Academy
+HTML and CSS projects that were created while attending The Tech Academy
