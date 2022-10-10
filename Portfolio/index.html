@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width" />
         <title>Daniel Briere</title>
         <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+        <script src="JS/JavaScript.js"></script>
     </head>
 
     <!--Body-->
@@ -32,7 +33,7 @@
 
         <!--Video text-->
         <div class="Video_Text">
-            <h1 class="white-text">Daniel Briere's Portfolio</h1>
+            <h1 class="white-text" style="font-size:6vw">Daniel Briere's Portfolio</h1>
             <strong>
                 <p class="center">
                     <q>Any sufficiently advanced technology is indistinguishable from magic.</q>
@@ -90,22 +91,30 @@
             <!--Contact form, right column-->
             <div class="Column_1 Column_tall">
                 <h1>Contact</h1>
-                <form action="https://formspree.io/f/xaykqprr" method="POST">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
-                </form>
+                <!--Open Form Button-->
+                <button class="open-button" onclick="openForm()">Open Form</button>
+                <!--The Form-->
+                <div class="form-popup" id="myForm">
+                    <form action="https://formspree.io/f/xaykqprr" class="form-container" onsubmit="return validateForm()" method="POST">
+                        <label>Name:</label>
+                            <input type="text" name="fname" placeholder="Please enter your name here">
+                        <label>Email:</label>
+                            <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                        <label>Phone Number:</label>
+                            <input type="text" name="Phone" placeholder="Please enter your phone numbers here">
+                        <label>Message:</label>
+                            <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                            <input type="submit" value="SUBMIT">
+                            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                </div>
             </div>
         </div>
 
         <!--Footer section-->
         <footer>
             <p>
-                <p class="center">Daniel Briere<a href="https://github.com/Daniel-Briere" target="_blank">Daniel Briere</a></p>
+                <p class="center">2022 <a href="https://github.com/Daniel-Briere" target="_blank">Daniel Briere</a></p>
                 <br>
             </p>
         </footer>
